@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
-import './style/index.css'
+import './style/index.less'
 import App from './App'
 
 ReactDOM.render(

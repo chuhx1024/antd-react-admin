@@ -1,30 +1,27 @@
-import { Button } from 'antd'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Example from './views/example'
 import Home from './views/home'
+import Dashboard from './views/dashboard'
+import LineDemo from './views/echarts/LineDemo'
+import PieDemo from './views/echarts/PieDemo'
+import BarFirst from './views/echarts/barGroup/BarFirst'
+import BarSecond from './views/echarts/barGroup/BarSecond'
 function App () {
     return (
-        <div className="App">
-            <header className="App-header">
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <Button type="primary">Button</Button>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-                <Example />
-            </header>
+        <div>
             <section>
                 <BrowserRouter>
-                    <Route path="/eg" component={Example}></Route>
-                    <Route path="/home" component={Home}></Route>
-                    <Route path="/order" component={Example}></Route>
+                    <Switch>
+                        <Route path="/" exact component={Dashboard}></Route>
+                        <Route path="/echarts/lineDemo" exact component={LineDemo}></Route>
+                        <Route path="/echarts/pieDemo" exact component={PieDemo}></Route>
+                        <Route path="/echarts/lineDemo" exact component={Dashboard}></Route>
+                        <Route path="/echarts/lineDemo" exact component={Dashboard}></Route>
+                        <Route path="/echarts/barGroup/barFirst" exact component={BarFirst}></Route>
+                        <Route path="/echarts/barGroup/barSecond" exact component={BarSecond}></Route>
+                        <Route path="/home" component={Home}></Route>
+                        <Route path="/eg" component={Example}></Route>
+                    </Switch>
                 </BrowserRouter>
             </section>
         </div>

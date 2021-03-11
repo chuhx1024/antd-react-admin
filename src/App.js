@@ -1,4 +1,5 @@
 import { Button } from 'antd'
+import Example from './views/example'
 function App () {
     return (
         <div className="App">
@@ -15,6 +16,7 @@ function App () {
                 >
                     Learn React
                 </a>
+                <Example />
             </header>
         </div>
     )

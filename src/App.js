@@ -1,5 +1,7 @@
 import { Button } from 'antd'
+import { BrowserRouter, Route } from 'react-router-dom'
 import Example from './views/example'
+import Home from './views/home'
 function App () {
     return (
         <div className="App">
@@ -18,6 +20,13 @@ function App () {
                 </a>
                 <Example />
             </header>
+            <section>
+                <BrowserRouter>
+                    <Route path="/eg" component={Example}></Route>
+                    <Route path="/home" component={Home}></Route>
+                    <Route path="/order" component={Example}></Route>
+                </BrowserRouter>
+            </section>
         </div>
     )
 }
